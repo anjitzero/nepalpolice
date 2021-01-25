@@ -27,19 +27,19 @@ $(function() {
 
     var scrollLink = $('.page-scroll');
     // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
+    // $(window).scroll(function () {
+    //     var scrollbarLocation = $(this).scrollTop();
 
-        scrollLink.each(function () {
+    //     scrollLink.each(function () {
 
-            var sectionOffset = $(this.hash).offset().top - 73;
+    //         var sectionOffset = $(this.hash).offset().top - 73;
 
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
+    //         if (sectionOffset <= scrollbarLocation) {
+    //             $(this).parent().addClass('active');
+    //             $(this).parent().siblings().removeClass('active');
+    //         }
+    //     });
+    // });
     
     
     //===== close navbar-collapse when a  clicked
@@ -190,6 +190,13 @@ $(function() {
         }, 1500);
     });
     
+
+    $('.half--width--trigger').click(function(e){
+         $('body').hasClass('active')? $(this).text('full screen') : $(this).text('split screen') 
+        $('body').toggleClass('active');
+        $('.inspect--elem ').slideToggle();
+
+    })
     
     //===== 
     
