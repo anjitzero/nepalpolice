@@ -192,9 +192,10 @@ $(function() {
     
 
     $('.half--width--trigger').click(function(e){
-         $('body').hasClass('active')? $(this).text('full screen') : $(this).text('split screen') 
         $('body').toggleClass('active');
         $('.inspect--elem ').slideToggle();
+         $('body').hasClass('active')? $(this).text('full screen') : $(this).text('split screen') 
+        
 
     })
     
